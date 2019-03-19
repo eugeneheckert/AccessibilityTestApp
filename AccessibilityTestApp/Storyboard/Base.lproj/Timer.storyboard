@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C0Y-a9-gqW">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CountDownTimer-->
+        <scene sceneID="X8v-Xp-4fM">
+            <objects>
+                <viewController storyboardIdentifier="CountDownTimerViewController" title="CountDownTimer" id="C0Y-a9-gqW" customClass="CountDownTimerViewController" customModule="AccessibilityTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D5U-X1-iTT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kyW-LZ-pPS">
+                                <rect key="frame" x="186" y="400" width="42" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XU-Va-JFd">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR6-El-Njk">
+                                        <rect key="frame" x="0.0" y="36.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8862745098" green="0.13725490200000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lUj-Al-FU9">
+                                <rect key="frame" x="162.5" y="473" width="89" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nJ-ya-ege">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
+                                        <state key="normal" title="Select a time"/>
+                                        <connections>
+                                            <action selector="selectTimeTapped:" destination="C0Y-a9-gqW" eventType="touchUpInside" id="3UV-XH-duw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A8-rF-4kj">
+                                        <rect key="frame" x="0.0" y="46" width="89" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveTimeTapped:" destination="C0Y-a9-gqW" eventType="touchUpInside" id="nHb-PX-TR0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.38823529410000002" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qR-iY-LXy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYx-uc-bmn">
+                                <rect key="frame" x="0.0" y="848" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="wnL-J4-RXO">
+                                        <connections>
+                                            <action selector="cancelTimePickerTapped:" destination="C0Y-a9-gqW" id="80a-O0-p2a"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JkG-HI-9Xg"/>
+                                    <barButtonItem title="Done" id="u6u-AZ-vV7">
+                                        <connections>
+                                            <action selector="timePickerDoneTapped:" destination="C0Y-a9-gqW" id="t8y-F4-UpY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6Y-fN-ozD">
+                                <rect key="frame" x="0.0" y="897" width="414" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA1-Su-LxF">
+                                <rect key="frame" x="0.0" y="897" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="573407025.769256">
+                                    <!--2019-03-04 15:43:45 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LA1-Su-LxF" firstAttribute="top" secondItem="aYx-uc-bmn" secondAttribute="bottom" id="3QB-pT-WmD"/>
+                            <constraint firstItem="aYx-uc-bmn" firstAttribute="leading" secondItem="T7E-27-k75" secondAttribute="leading" id="5sc-op-1L3"/>
+                            <constraint firstItem="1qR-iY-LXy" firstAttribute="leading" secondItem="T7E-27-k75" secondAttribute="leading" id="7Cp-7D-0WX"/>
+                            <constraint firstItem="L6Y-fN-ozD" firstAttribute="centerX" secondItem="LA1-Su-LxF" secondAttribute="centerX" id="C0u-2w-9eX"/>
+                            <constraint firstItem="kyW-LZ-pPS" firstAttribute="centerY" secondItem="T7E-27-k75" secondAttribute="centerY" id="CDF-FL-d4I"/>
+                            <constraint firstItem="aYx-uc-bmn" firstAttribute="trailing" secondItem="T7E-27-k75" secondAttribute="trailing" id="KyR-rA-lCK"/>
+                            <constraint firstItem="L6Y-fN-ozD" firstAttribute="centerY" secondItem="LA1-Su-LxF" secondAttribute="centerY" id="M2r-7c-pNI"/>
+                            <constraint firstItem="LA1-Su-LxF" firstAttribute="leading" secondItem="T7E-27-k75" secondAttribute="leading" id="N0A-MC-YyH"/>
+                            <constraint firstItem="LA1-Su-LxF" firstAttribute="trailing" secondItem="T7E-27-k75" secondAttribute="trailing" id="Qof-1f-YKY"/>
+                            <constraint firstItem="LA1-Su-LxF" firstAttribute="bottom" secondItem="T7E-27-k75" secondAttribute="bottom" constant="300" id="TMY-bS-8j5"/>
+                            <constraint firstItem="1qR-iY-LXy" firstAttribute="top" secondItem="T7E-27-k75" secondAttribute="top" id="TkJ-ty-LPO"/>
+                            <constraint firstItem="lUj-Al-FU9" firstAttribute="top" secondItem="kyW-LZ-pPS" secondAttribute="bottom" constant="16" id="UZS-9A-Aog"/>
+                            <constraint firstItem="L6Y-fN-ozD" firstAttribute="width" secondItem="LA1-Su-LxF" secondAttribute="width" id="Wgs-8B-Gs5"/>
+                            <constraint firstItem="T7E-27-k75" firstAttribute="trailing" secondItem="1qR-iY-LXy" secondAttribute="trailing" id="Zfk-Dq-Ssa"/>
+                            <constraint firstItem="kyW-LZ-pPS" firstAttribute="centerX" secondItem="lUj-Al-FU9" secondAttribute="centerX" id="c5X-CG-mfj"/>
+                            <constraint firstItem="kyW-LZ-pPS" firstAttribute="centerX" secondItem="T7E-27-k75" secondAttribute="centerX" id="mHs-3V-Tl9"/>
+                            <constraint firstItem="L6Y-fN-ozD" firstAttribute="height" secondItem="LA1-Su-LxF" secondAttribute="height" id="mVj-EB-0Pf"/>
+                            <constraint firstAttribute="bottom" secondItem="1qR-iY-LXy" secondAttribute="bottom" id="o8G-Tv-xhE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T7E-27-k75"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Count Down" image="iconAlarm" id="TAB-7j-eWb"/>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="05W-US-ShG"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="1qR-iY-LXy" id="ch8-Kl-Wxp"/>
+                        <outlet property="countDownDatePicker" destination="LA1-Su-LxF" id="wcf-vv-7hS"/>
+                        <outlet property="datePickerBottomConstraint" destination="TMY-bS-8j5" id="0XP-CO-Afx"/>
+                        <outlet property="saveTimeButton" destination="6A8-rF-4kj" id="Kwq-R4-y7p"/>
+                        <outlet property="selectTimeButton" destination="5nJ-ya-ege" id="MGu-7i-d49"/>
+                        <outlet property="timerLabel" destination="pR6-El-Njk" id="ZVE-Qd-4OJ"/>
+                        <outlet property="titleLabel" destination="2XU-Va-JFd" id="9PR-Xv-lJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwc-RJ-Njz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconAlarm" width="24" height="24"/>
+    </resources>
+</document>

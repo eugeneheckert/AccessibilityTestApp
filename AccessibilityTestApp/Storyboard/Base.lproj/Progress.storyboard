@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VJt-jX-01o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Progress-->
+        <scene sceneID="bMY-Jz-W0N">
+            <objects>
+                <viewController storyboardIdentifier="ProgressViewController" id="VJt-jX-01o" customClass="ProgressViewController" customModule="AccessibilityTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="blX-d6-nlY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQC-vJ-SO7" customClass="ProgressView" customModule="AccessibilityTestApp" customModuleProvider="target">
+                                <rect key="frame" x="94" y="110.5" width="187.5" height="187.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vQC-vJ-SO7" secondAttribute="height" multiplier="1:1" id="Cmp-Mk-Bb4"/>
+                                </constraints>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2JR-9o-I8E">
+                                <rect key="frame" x="94" y="318" width="187.5" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqa-y2-X3u">
+                                <rect key="frame" x="164.5" y="338" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="Gly-J5-sev"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="dby-NB-QNq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="VJt-jX-01o" eventType="touchUpInside" id="5i7-ey-lwC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dqa-y2-X3u" firstAttribute="centerX" secondItem="2JR-9o-I8E" secondAttribute="centerX" id="DqY-Fo-Pv4"/>
+                            <constraint firstItem="vQC-vJ-SO7" firstAttribute="width" secondItem="2JR-9o-I8E" secondAttribute="width" id="Jk7-9F-34I"/>
+                            <constraint firstItem="2JR-9o-I8E" firstAttribute="centerX" secondItem="idn-zJ-aXb" secondAttribute="centerX" id="Lc7-E9-WJe"/>
+                            <constraint firstItem="2JR-9o-I8E" firstAttribute="centerY" secondItem="idn-zJ-aXb" secondAttribute="centerY" id="Pkp-LA-cIZ"/>
+                            <constraint firstItem="2JR-9o-I8E" firstAttribute="top" secondItem="vQC-vJ-SO7" secondAttribute="bottom" constant="20" id="QTt-Qb-Vmd"/>
+                            <constraint firstItem="2JR-9o-I8E" firstAttribute="width" secondItem="blX-d6-nlY" secondAttribute="width" multiplier="0.5" id="VQa-oQ-iWp"/>
+                            <constraint firstItem="vQC-vJ-SO7" firstAttribute="centerX" secondItem="blX-d6-nlY" secondAttribute="centerX" id="arI-Sc-6Ym"/>
+                            <constraint firstItem="dqa-y2-X3u" firstAttribute="top" secondItem="2JR-9o-I8E" secondAttribute="top" constant="20" id="gcm-2H-LFu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="idn-zJ-aXb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Progress" image="iconProgress" id="hm6-hz-0At"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="progressBarView" destination="2JR-9o-I8E" id="bsz-UR-LSC"/>
+                        <outlet property="progressView" destination="vQC-vJ-SO7" id="F78-QK-G90"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jD-ZN-W3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="-270"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconProgress" width="48" height="48"/>
+    </resources>
+</document>
